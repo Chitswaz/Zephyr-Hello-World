@@ -1,41 +1,21 @@
-# Zephyr Hello World
+# On Ubuntu/Debian:
+sudo apt update && sudo apt install -y \
+    git cmake ninja-build gperf \
+    ccache dfu-util device-tree-compiler \
+    qemu-system-x86  # For emulation
 
-This repository contains a simple "Hello World" application for Zephyr RTOS using the recommended T2 topology.
+python3 -m venv ~/.venv/zephyr
+source ~/.venv/zephyr/bin/activate
+pip install west pyelftools
 
-Please follow the instructions here to set up your workspace: https://docs.zephyrproject.org/latest/develop/getting_started/index.html
+wget https://github.com/zephyrproject-rtos/sdk-ng/releases/download/v0.16.5/zephyr-sdk-0.16.5_linux-x86_64.tar.gz
+tar xvf zephyr-sdk-0.16.5_linux-x86_64.tar.gz
+cd zephyr-sdk-0.16.5
+./setup.sh
 
-## Prerequisites
-1. Install `west`:
-   ```sh
-   pip install --user west
-   ```
-2. Initialize and update the Zephyr repository:
-   ```sh
-   west init -m https://github.com/zephyrproject-rtos/zephyr --manifest-rev main zephyrproject
-   cd zephyrproject
-   west update
-   west zephyr-export
-   pip install --user -r zephyr/scripts/requirements.txt
-   ```
+git clone https://github.com/your-repo/zephyr-hello-world.git
+cd zephyr-hello-world
+pip install -r zephyr/scripts/requirements.txt
 
-## Building the Application
-1. Navigate to the `hello_world` directory:
-   ```sh
-   cd hello_world
-   ```
-2. Build for a specific board (e.g., `qemu_x86`):
-   ```sh
-   west build -b qemu_x86 .
-   ```
-
-## Running the Application
-1. Run in QEMU (if using `qemu_x86`):
-   ```sh
-   west build -t run
-   ```
-
-You should see:
-```
-Hello, Zephyr!
-```
-
+    
+    
