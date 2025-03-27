@@ -2,6 +2,8 @@
 
 This repository contains a simple "Hello World" application for Zephyr RTOS using the recommended T2 topology.
 
+Please follow the instructions here to set up your workspace: https://docs.zephyrproject.org/latest/develop/getting_started/index.html
+
 ## Prerequisites
 1. Install `west`:
    ```sh
