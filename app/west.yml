@@ -1,11 +1,15 @@
 manifest:
+  version: "0.13"
+
   remotes:
-    - name: zephyrproject-rtos
+    - name: zephyr
       url-base: https://github.com/zephyrproject-rtos
+
   projects:
     - name: zephyr
-      remote: zephyrproject-rtos
-      revision: v3.5.0
-      import: true
+      remote: zephyr
+      revision: main
+      import: true  # Import Zephyr's west.yml for additional modules
+
   self:
-    path: app
+    path: app  # This is the application (manifest repository)
