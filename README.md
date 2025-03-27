@@ -1,4 +1,4 @@
-# On Ubuntu/Debian:
+# On Ubuntu/Debian: We are creating a simple application to run using the Zephyr OS
 sudo apt update && sudo apt install -y \
     git cmake ninja-build gperf \
     ccache dfu-util device-tree-compiler \
@@ -13,7 +13,7 @@ tar xvf zephyr-sdk-0.16.5_linux-x86_64.tar.gz
 cd zephyr-sdk-0.16.5
 ./setup.sh
 
-git clone https://github.com/your-repo/zephyr-hello-world.git
+git clone https://github.com/Chitswaz/zephyr-hello-world.git
 cd zephyr-hello-world
 pip install -r zephyr/scripts/requirements.txt
 
