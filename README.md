@@ -4,5 +4,5 @@
 
 1. Clone this repo:
    ```bash
-   git clone https://github.com/yourusername/zephyr-hello-world.git
+   git clone https://github.com/Chitswaz/zephyr-hello-world.git
    cd zephyr-hello-world
